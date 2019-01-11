@@ -1,0 +1,38 @@
+<h1>Mountains!</h1>
+
+<h2>Mountains on my bucket list!</h2>
+
+<ul>
+  {{#each mountains}}
+    {{#unless shred}}
+      {{> mountains/mountain-block shreded=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Shreded Mountains!</h2>
+
+<ul>
+  {{#each mountains}}
+    {{#if shred}}
+      {{> mountains/mountain-block shreded=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a mountain</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Mountain Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="shred">Shred?</label><br>
+    <input type="radio" name="shred" value="1" checked> Shreded!<br>
+    <input type="radio" name="shred" value="0"> Bucket List!
+  </div>
+
+  <button type="submit">Add Mountain to Shred!</button>
+</form>
