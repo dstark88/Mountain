@@ -1,21 +1,21 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-shreded").on("click", function(event) {
+    $(".change-shredded").on("click", function(event) {
       var id = $(this).data("id");
-      var newShreded = $(this).data("newshreded");
-      console.log("newshreded", newShreded);
+      var newShredded = $(this).data("newshredded");
+      console.log("newshredded", newShredded);
   
-      var newShrededState = {
-        shred: newShreded
+      var newShreddedState = {
+        shred: newShredded
       };
   
       // Send the PUT request.
       $.ajax("/api/mountains/" + id, {
         type: "PUT",
-        data: newShrededState
+        data: newShreddedState
       }).then(
         function() {
-          console.log("changed shreded to", newShreded);
+          console.log("changed shredded to", newShredded);
           // Reload the page to get the updated list
           location.reload();
         }
