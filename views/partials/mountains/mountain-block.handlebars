@@ -1,8 +1,9 @@
 <li>
 	{{mountain_name}}
 
-	<button class="change-shreded" data-id="{{id}}" data-newshreded="{{shreded}}">
-		{{#if shreded}}Shreded It!{{else}}Bucket List!{{/if}}
+	<button class="change-shreded btn btn-secondary btn-sm" data-id="{{id}}" data-newshreded="{{shreded}}">
+		{{#if shreded}}Bucket List!{{else}}Shreded It!{{/if}}
 	</button>
 
+	<button class="delete-mountain btn btn-secondary btn-sm" data-id="{{this.id}}">Remove!</button>
 </li>
